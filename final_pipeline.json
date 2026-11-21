@@ -1,0 +1,69 @@
+{
+  "pipeline": {
+    "name": "Pipeline B",
+    "intensity": {
+      "method": "hist_eq"
+    },
+    "filter": [
+      {
+        "method": "mean",
+        "ksize": 5
+      }
+    ],
+    "segmentation": {
+      "method": "otsu"
+    },
+    "morphology": [
+      {
+        "op": "open",
+        "ksize": 3
+      },
+      {
+        "op": "fill_holes"
+      }
+    ],
+    "separation": {
+      "method": "watershed_peaks",
+      "min_distance": 35,
+      "min_peak": 3
+    },
+    "min_area": 400
+  },
+  "student_id": "254312024",
+  "seed": 14050,
+  "histogram_matching_reference": {
+    "sequence": "01",
+    "frame": 12,
+    "used": false
+  },
+  "baseline": {
+    "name": "Baseline (Otsu + CCL)",
+    "intensity": {
+      "method": "none"
+    },
+    "filter": [],
+    "segmentation": {
+      "method": "otsu"
+    },
+    "morphology": [],
+    "separation": {
+      "method": "none"
+    },
+    "min_area": 50
+  },
+  "selection_rule": "min validation MAE -> RMSE -> mean time -> complexity",
+  "validation": {
+    "val_MAE": 1.2,
+    "val_RMSE": 1.5491933384829668,
+    "val_Bias": 1.2,
+    "mean_time_ms": 130.94689333332406,
+    "val_preds": "23 24 22 23 23"
+  },
+  "software": {
+    "python": "3.13.9",
+    "opencv": "4.13.0",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "scikit-image": "0.25.2"
+  }
+}

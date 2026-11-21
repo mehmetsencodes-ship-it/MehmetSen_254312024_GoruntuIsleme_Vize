@@ -1,0 +1,59 @@
+exp_id,stage,intensity,filter,segmentation,morphology,separation,min_area,dev_MAE,dev_RMSE,dev_Bias,dev_ExactAcc,mean_time_ms,selected,dev_preds
+B01,S0-baseline,none,none,otsu,none,none,0,774.6,789.8416296954725,774.6,0.0,7.2993300001144235,False,1046 987 972 886 800 707 672 666 608 627
+B02,S0-baseline,none,none,otsu,none,none,25,10.7,11.606032913963324,9.1,0.0,7.118629999877157,False,15 30 32 30 37 39 39 36 30 28
+B03,S0-baseline,none,none,otsu,none,none,50,4.0,5.059644256269407,-1.0,0.0,7.299139999940962,True,12 21 23 21 20 27 28 22 22 19
+B04,S0-baseline,none,none,otsu,none,none,100,6.5,7.5960516059331775,-6.5,0.0,7.20595000011599,False,9 13 16 17 15 18 18 19 18 17
+B05,S0-baseline,none,none,otsu,none,none,200,9.0,9.643650760992955,-9.0,0.0,7.306990000051883,False,8 11 13 14 13 14 15 16 15 16
+B06,S0-baseline,none,none,otsu,none,none,400,10.9,11.326958991715296,-10.9,0.0,7.292160000088188,False,8 9 10 11 13 12 12 13 14 14
+E01,S1-intensity,none,gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,11.3,11.708970919769166,-11.3,0.0,22.444520000044577,False,8 8 10 10 13 13 12 12 13 13
+E02,S1-intensity,"stretch(p_low=1.0,p_high=99.5)",gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,9.4,9.899494936611665,-9.4,0.0,37.15456999998423,False,8 11 12 14 14 13 14 15 15 15
+E03,S1-intensity,"gamma(gamma=0.5,p_high=99.5)",gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,5.7,5.958187643906492,-5.7,0.0,36.906159999944066,False,15 17 17 17 17 17 17 17 17 17
+E04,S1-intensity,"gamma(gamma=0.3,p_high=99.5)",gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,2.4,3.03315017762062,-2.4,0.2,42.70584999976563,False,19 20 20 20 20 20 21 20 20 21
+E05,S1-intensity,log(p_high=99.5),gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,2.6,3.1937438845342623,-2.6,0.1,38.72422000004008,False,18 20 20 20 20 20 21 20 20 20
+E06,S1-intensity,hist_eq,gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,1.1,1.224744871391589,0.5,0.1,23.981930000081775,True,25 25 23 22 25 22 22 22 22 22
+E07,S1-intensity,"clahe(clip_limit=2.0,tile=8)",gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,7.6,8.024961059095553,-7.6,0.0,23.034780000216415,False,12 12 15 15 16 16 16 16 15 16
+E08,S1-intensity,"clahe(clip_limit=8.0,tile=8)",gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,5.8,6.082762530298219,-5.8,0.0,23.344919999817648,False,15 17 16 17 17 17 17 17 17 17
+E09,S1-intensity,hist_match,gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,13.0,13.349157276772193,-13.0,0.0,35.991610000019136,False,8 8 8 8 8 11 11 11 11 11
+E10,S2-filter,hist_eq,none,otsu,open(5) -> fill_holes,none,400,1.5,1.760681686165901,-0.7,0.2,24.122149999857356,False,21 22 22 22 22 23 21 21 22 22
+E11,S2-filter,hist_eq,gaussian(ksize=3),otsu,open(5) -> fill_holes,none,400,1.9,3.1144823004794873,1.7,0.1,24.534499999936088,False,32 25 24 27 24 22 22 22 22 22
+E12,S2-filter,hist_eq,gaussian(ksize=5),otsu,open(5) -> fill_holes,none,400,1.1,1.224744871391589,0.5,0.1,24.07214999984717,False,25 25 23 22 25 22 22 22 22 22
+E13,S2-filter,hist_eq,gaussian(ksize=9),otsu,open(5) -> fill_holes,none,400,1.0,1.0,0.4,0.0,22.74436000006972,False,24 25 23 23 24 22 22 22 22 22
+E14,S2-filter,hist_eq,gaussian(ksize=15),otsu,open(5) -> fill_holes,none,400,1.0,1.0954451150103321,0.2,0.1,22.609299999840005,False,23 25 23 23 23 22 22 22 22 22
+E15,S2-filter,hist_eq,median(ksize=5),otsu,open(5) -> fill_holes,none,400,13.5,14.33527118683145,13.5,0.0,26.941379999880155,False,39 35 40 34 35 46 35 29 37 30
+E16,S2-filter,hist_eq,mean(ksize=5),otsu,open(5) -> fill_holes,none,400,0.9,0.9486832980505138,0.5,0.1,23.254019999967568,True,24 25 23 23 25 22 22 22 22 22
+E17,S2-filter,hist_eq,sharpen(kernel=laplacian4),otsu,open(5) -> fill_holes,none,400,3.9,4.527692569068709,-3.9,0.0,23.193970000011177,False,17 20 17 17 19 20 19 18 19 20
+E18,S2-filter,hist_eq,gaussian(ksize=5) -> sharpen(kernel=laplacian4),otsu,open(5) -> fill_holes,none,400,1.1,1.140175425099138,0.3,0.0,23.635599999943224,False,24 25 23 22 24 22 22 22 22 22
+E19,S2-filter,hist_eq,"unsharp(ksize=9,amount=1.0)",otsu,open(5) -> fill_holes,none,400,2.2,2.756809750418044,-1.4,0.2,29.227559999981167,False,19 22 20 19 22 23 21 21 22 22
+E20,S3-segmentation,hist_eq,mean(ksize=5),fixed(threshold=40),open(5) -> fill_holes,none,400,13.2,13.813037319865606,-13.2,0.0,24.912140000105865,False,10 11 10 8 5 4 13 16 7 9
+E21,S3-segmentation,hist_eq,mean(ksize=5),fixed(threshold=80),open(5) -> fill_holes,none,400,21.3,22.246348014898985,21.3,0.0,25.38596000003963,False,49 57 35 35 50 41 43 43 46 39
+E22,S3-segmentation,hist_eq,mean(ksize=5),fixed(threshold=120),open(5) -> fill_holes,none,400,2.2,3.0,1.8,0.1,22.609580000153073,False,30 24 29 26 23 23 22 22 22 22
+E23,S3-segmentation,hist_eq,mean(ksize=5),fixed(threshold=160),open(5) -> fill_holes,none,400,1.2,1.2649110640673518,-0.2,0.0,22.124970000095345,False,22 22 23 23 23 22 22 22 22 22
+E24,S3-segmentation,hist_eq,mean(ksize=5),otsu,open(5) -> fill_holes,none,400,0.9,0.9486832980505138,0.5,0.1,23.02863000004436,True,24 25 23 23 25 22 22 22 22 22
+E25,S3-segmentation,hist_eq,mean(ksize=5),triangle,open(5) -> fill_holes,none,400,17.8,21.104501889407388,17.2,0.0,27.805769999758922,False,25 39 37 21 30 43 44 53 53 52
+E26,S3-segmentation,hist_eq,mean(ksize=5),"adaptive(block_size=151,C=-5,floor=30)",open(5) -> fill_holes,none,400,23.4,24.879710609249457,23.4,0.0,53.789250000136235,False,54 41 63 58 44 49 37 35 42 36
+E27,S3-segmentation,hist_eq,mean(ksize=5),"adaptive(block_size=301,C=-5,floor=30)",open(5) -> fill_holes,none,400,27.4,28.09626309671804,27.4,0.0,99.45625000018481,False,62 50 55 58 45 52 40 50 45 42
+E28,S3-segmentation,hist_eq,mean(ksize=5),"kmeans(k=3,n_background=1)",open(5) -> fill_holes,none,400,22.7,23.818060374430157,22.7,0.0,134.33007000003272,False,47 49 32 33 50 49 48 47 48 49
+E29,S4-morphology,hist_eq,mean(ksize=5),otsu,none,none,400,1.0,1.1832159566199232,0.0,0.2,8.932480000203213,False,23 24 23 22 23 22 22 22 22 22
+E30,S4-morphology,hist_eq,mean(ksize=5),otsu,fill_holes,none,400,1.1,1.224744871391589,0.1,0.1,22.998360000019602,False,24 24 23 22 23 22 22 22 22 22
+E31,S4-morphology,hist_eq,mean(ksize=5),otsu,erode(5) -> fill_holes,none,400,1.2,1.2649110640673518,-0.2,0.0,22.98629000006258,False,22 23 22 23 23 22 22 22 22 22
+E32,S4-morphology,hist_eq,mean(ksize=5),otsu,dilate(5) -> fill_holes,none,400,3.2,4.494441010848846,2.8,0.1,23.526570000012725,False,30 24 34 30 23 24 22 22 22 22
+E33,S4-morphology,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,none,400,0.8,0.8944271909999159,0.2,0.2,22.98453999992489,True,23 24 23 23 24 22 22 22 22 22
+E34,S4-morphology,hist_eq,mean(ksize=5),otsu,open(5) -> fill_holes,none,400,0.9,0.9486832980505138,0.5,0.1,23.28339000023334,False,24 25 23 23 25 22 22 22 22 22
+E35,S4-morphology,hist_eq,mean(ksize=5),otsu,open(9) -> fill_holes,none,400,1.0,1.1832159566199232,0.4,0.2,23.449880000043777,False,25 24 22 24 24 22 22 22 22 22
+E36,S4-morphology,hist_eq,mean(ksize=5),otsu,open(15) -> fill_holes,none,400,1.4,1.61245154965971,-0.4,0.1,24.71045000011145,False,23 22 22 22 22 22 22 22 22 22
+E37,S4-morphology,hist_eq,mean(ksize=5),otsu,close(9) -> fill_holes,none,400,2.0,2.4899799195977463,1.6,0.1,23.908920000121725,False,26 24 29 28 23 23 22 22 22 22
+E38,S4-morphology,hist_eq,mean(ksize=5),otsu,open(9) -> close(9) -> fill_holes,none,400,0.9,1.0488088481701516,0.3,0.2,24.169120000078692,False,24 24 24 23 23 22 22 22 22 22
+E39,S4-morphology,hist_eq,mean(ksize=5),otsu,close(9) -> open(9) -> fill_holes,none,400,1.4,1.8973665961010275,1.0,0.1,27.90374999985943,False,28 25 25 24 23 22 22 22 22 22
+E40,S4-morphology,hist_eq,mean(ksize=5),otsu,fill_holes -> open(9),none,400,1.0,1.0954451150103321,0.2,0.1,24.232070000107342,False,23 25 23 23 23 22 22 22 22 22
+E41,S5-separation,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,none,400,0.8,0.8944271909999159,0.2,0.2,22.90467999991961,False,23 24 23 23 24 22 22 22 22 22
+E42,S5-separation,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=15,min_peak=3)",400,1.4,1.4832396974191326,1.4,0.0,89.94665999980498,False,25 26 26 26 26 22 22 22 22 22
+E43,S5-separation,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=25,min_peak=3)",400,0.9,1.0488088481701516,0.9,0.2,91.71793000004982,False,25 24 25 25 25 22 22 22 22 22
+E44,S5-separation,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=35,min_peak=3)",400,0.5,0.7071067811865476,0.5,0.5,93.70701999987432,True,23 24 24 24 25 22 22 22 22 22
+E45,S5-separation,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,watershed_hmax(h=2.0),400,2.9,3.0495901363953815,2.9,0.0,182.54900000001726,False,27 28 27 26 28 22 24 25 24 23
+E46,S5-separation,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,watershed_hmax(h=4.0),400,2.8,2.932575659723036,2.8,0.0,203.73757999996087,False,27 27 27 26 28 22 24 25 24 23
+E47,S5-separation,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_hmax(h=4.0,dist_blur=9)",400,1.1,1.140175425099138,1.1,0.0,208.25818999983312,False,25 25 25 25 26 22 22 22 22 22
+E48,S6-min_area,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=35,min_peak=3)",100,1.3,1.5811388300841898,1.3,0.1,91.38990999981615,False,26 27 25 24 26 22 22 22 22 22
+E49,S6-min_area,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=35,min_peak=3)",200,0.6,0.7745966692414834,0.6,0.4,90.76110000005428,False,24 24 24 24 25 22 22 22 22 22
+E50,S6-min_area,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=35,min_peak=3)",400,0.5,0.7071067811865476,0.5,0.5,92.38491000014619,True,23 24 24 24 25 22 22 22 22 22
+E51,S6-min_area,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=35,min_peak=3)",600,0.7,0.9486832980505138,0.3,0.4,90.53340999998909,False,21 24 24 24 25 22 22 22 22 22
+E52,S6-min_area,hist_eq,mean(ksize=5),otsu,open(3) -> fill_holes,"watershed_peaks(min_distance=35,min_peak=3)",800,0.8,1.0,0.2,0.3,94.60541000016747,False,21 24 24 24 24 22 22 22 22 22
